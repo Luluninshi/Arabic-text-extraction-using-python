@@ -9,12 +9,12 @@ import cv2
 image_path='images/image1.jpeg'
 
 # output image file
-out_image='output_images/out11.jpeg'
+out_image='output_image/out11.jpeg'
 results=arabicocr.arabic_ocr(image_path,out_image)
 
 
 # read the extracted image
-img = cv2.imread('output_images/out11.jpeg', cv2.IMREAD_UNCHANGED)
+img = cv2.imread('output_image/out11.jpeg', cv2.IMREAD_UNCHANGED)
 
 extracted_text = []
 ser_number = []
@@ -57,4 +57,4 @@ Data = pd.DataFrame(np.array([ser_number,extracted_text]).T,columns=['Annotation
                                                                      'ExtractedText'])
 
 # daving the dataframe into csv file 
-Data.to_csv('output_csv_files/output_file.csv')
+Data.to_csv('output_csv/output_file.csv')
